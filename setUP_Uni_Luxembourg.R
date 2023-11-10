@@ -4,7 +4,7 @@
 if (!("rstudioapi" %in% installed.packages())) {install.packages("rstudioapi")}
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))# set the working directory to the current R Script location 
 par(function(){dev.new(); par(no.readonly=T)}()); options(scipen=999); dev.off()
-rm(list=ls()) # comment this out to keep saved elements 
+rm(list=ls()) # comment this out to keep saved elements if necessary
 cat("\014")
 #' Colors 
 ULblue <- rgb(40/255, 161/255, 215/255) # University of Luxembourg blue corporate color
