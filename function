@@ -1,0 +1,34 @@
+setUP <- function(setWorkingDirectory = TRUE, 
+                  resetGraphicalParameters = TRUE, 
+                  setNotation = TRUE, 
+                  clearWorkspace = TRUE, 
+                  clearConsole = TRUE) {
+  
+  if (!("rstudioapi" %in% installed.packages())) 
+    {install.packages("rstudioapi")}
+  
+  
+  if (setWorkingDirectory) {
+    setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
+  }
+  
+  if (resetGraphicalParameters) {
+    y = function(){dev.new();x=par(no.readonly=T); dev.off(); x} 
+    par(y())
+  }
+  
+  if (setNotation) {
+    options(scipen = 999)
+  }
+  
+  if (clearConsole) {
+    cat("\014")
+    dev.off()
+  }
+  
+  if (clearWorkspace) {
+    rm(list = ls())
+  }
+}
+
+setUP()
