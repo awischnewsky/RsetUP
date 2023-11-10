@@ -11,7 +11,7 @@ This R project setUP code chunk is designed to automate the setup tasks at the b
 - `rstudioapi` package
 
 ## Usage
-Download the `setUP.R` from this repository, open, copy and place it in the beginning of your R script (recommended). Alternatively, locate the downloaded .R file in the folder of your main .R script and source it at the beginning of your R script (yet, graphical elements will not be cleared):
+Download the `setUP.R` from this repository, open, copy and place it in the beginning of your R script as a preamble (recommended). Alternatively, locate the downloaded .R file in the folder of your main .R script and source it at the beginning of your R script (yet, graphical elements will not be cleared):
 
 ```R
 source("setUP.R")
