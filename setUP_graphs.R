@@ -16,6 +16,8 @@ if (!("ggplot2" %in% installed.packages())) {install.packages("ggplot2")}
 ggplot2::theme_set(theme_bw())
 
 #' (colors)
-UTblue <- rgb(5/255, 110/255, 167/255, 1)
+UTblue <- rgb(5/255, 110/255, 167/255, 1) # University of Trier blue corporate color
+ULblue <- rgb(40/255, 161/255, 215/255) # University of Luxembourg blue corporate color
+ULred <- rgb(219/255, 2/255, 27/255) # University of Luxembourg red corporate color
 
 #-------------------------------------------------------------------------------
