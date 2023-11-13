@@ -13,7 +13,7 @@ if (!("extrafont" %in% installed.packages())) {install.packages("extrafont")}
 if (.Platform$OS.type == "windows") {extrafont::loadfonts(device = "win")
   windowsFonts(C = windowsFont("Segoe UI"))} # can pick any font
 if (!("ggplot2" %in% installed.packages())) {install.packages("ggplot2")}
-ggplot2::theme_set(theme_bw())
+ggplot2::theme_set(theme_bw() + theme(panel.border = element_blank()))
 
 #' (colors)
 UTblue <- rgb(5/255, 110/255, 167/255, 1) # University of Trier blue corporate color
